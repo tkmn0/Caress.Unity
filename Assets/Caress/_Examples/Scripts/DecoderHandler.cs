@@ -6,7 +6,7 @@ namespace Caress.Examples
     public class DecoderHandler : MonoBehaviour
     {
         public Decoder Decoder { get; private set; }
-        public event Action<float[], int> OnDecoded; 
+        public event Action<float[], int> OnDecoded;
         private const int BufferSize = 1024;
         private float[] _pcmBuffer = new float[BufferSize];
 
