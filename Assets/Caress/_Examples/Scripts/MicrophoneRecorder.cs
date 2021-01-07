@@ -7,15 +7,15 @@ namespace Caress.Examples
     {
         public event Action<float[]> OnAudioReady;
         private const int SampleRate = 48000;
-        private const int RecordeLengthSec = 1;
+        private const int RecordLengthSec = 1;
         private AudioClip _microphoneClip;
         private int _clipHead;
         private readonly float[] _processBuffer = new float[480];
-        private readonly float[] _microphoneBuffer = new float[RecordeLengthSec * SampleRate];
+        private readonly float[] _microphoneBuffer = new float[RecordLengthSec * SampleRate];
 
         void Start()
         {
-            _microphoneClip = Microphone.Start(null, true, RecordeLengthSec, SampleRate);
+            _microphoneClip = Microphone.Start(null, true, RecordLengthSec, SampleRate);
         }
 
         void Update()
