@@ -32,6 +32,7 @@ namespace Caress.Examples
             {
                 _audioClipData = new float[pcmLength];
             }
+
             Array.Copy(pcm, _audioClipData, pcmLength);
             _source.clip.SetData(_audioClipData, _clipHead);
             _clipHead += pcmLength;
