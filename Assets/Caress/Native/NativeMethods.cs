@@ -44,7 +44,13 @@ namespace Caress.Native
             int pcmLen,
             byte[] buffer,
             int bufferLen,
-            out EncodeDecodeResult result);
+            out IntResult result);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderSetBitrate(IntPtr ptr, int bitrate, out ApiError error);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderGetBitrate(IntPtr ptr, out IntResult result);
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void Decode(
