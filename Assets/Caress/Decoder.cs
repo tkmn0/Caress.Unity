@@ -32,7 +32,7 @@ namespace Caress
                 throw new Exception(result.Error.Data.StringValue());
             }
 
-            return result.Length;
+            return result.Value;
         }
 
         public int DecodeFloat(byte[] buffer, int bufferLength, float[] pcm, bool fec = false)
@@ -44,7 +44,7 @@ namespace Caress
                 throw new Exception(result.Error.Data.StringValue());
             }
 
-            return result.Length;
+            return result.Value;
         }
 
         public void Destroy()
