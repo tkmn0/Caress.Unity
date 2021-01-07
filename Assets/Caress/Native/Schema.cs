@@ -8,7 +8,7 @@ namespace Caress.Native
     {
         public IntPtr Ptr;
         public uint Length;
-        
+
         public string StringValue()
         {
             if (Ptr == IntPtr.Zero) return null;
@@ -23,14 +23,14 @@ namespace Caress.Native
             Marshal.Copy(Ptr, buff, 0, buff.Length);
             return buff;
         }
-        
+
         public Data(string value)
         {
             var buff = Encoding.UTF8.GetBytes(value);
             IntPtr unmanagedPointer = Marshal.AllocHGlobal(buff.Length);
             Marshal.Copy(buff, 0, unmanagedPointer, buff.Length);
             this.Ptr = unmanagedPointer;
-            this.Length = (uint)buff.Length;
+            this.Length = (uint) buff.Length;
         }
 
         public Data(byte[] value)
@@ -38,7 +38,7 @@ namespace Caress.Native
             IntPtr unmanagedPointer = Marshal.AllocHGlobal(value.Length);
             Marshal.Copy(value, 0, unmanagedPointer, value.Length);
             this.Ptr = unmanagedPointer;
-            this.Length = (uint)value.Length;
+            this.Length = (uint) value.Length;
         }
 
         public void Free()
@@ -49,7 +49,7 @@ namespace Caress.Native
             }
         }
     }
-    
+
     public struct ApiError
     {
         public byte Code;
@@ -76,7 +76,7 @@ namespace Caress.Native
 
     public enum ErrorCode : byte
     {
-        CaressOk  =  1,
+        CaressOk = 1,
         ErrorInitialize,
         ErrorUnInitialized,
         ErrorNoDataSupplied,
