@@ -27,7 +27,7 @@ namespace Caress.Examples
             if (_source.clip == null) return;
             _source.GetSpectrumData(_data, 0, FFTWindow.BlackmanHarris);
             _lineRenderer.positionCount = _data.Length;
-            
+
             var positions = new Vector3[_data.Length];
             const float xStretch = 8.0f;
             var yOffset = transform.position.y;
@@ -38,6 +38,7 @@ namespace Caress.Examples
                     _data[i] * 500.0f + yOffset,
                     0);
             }
+
             _lineRenderer.SetPositions(positions);
         }
     }
