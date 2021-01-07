@@ -1,5 +1,4 @@
-﻿using System;
-using UnityEngine;
+﻿using UnityEngine;
 
 namespace Caress.Examples
 {
@@ -14,8 +13,8 @@ namespace Caress.Examples
         {
             _noiseReducer = new NoiseReducer(new NoiseReducerConfig()
             {
-                SampleRate = (int)SampleRate,
-                NumChannels = (int)NumChannels,
+                SampleRate = (int) SampleRate,
+                NumChannels = (int) NumChannels,
                 Attenuation = 20,
                 Model = RnNoiseModel.Voice
             });
