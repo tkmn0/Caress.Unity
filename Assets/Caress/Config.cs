@@ -1,12 +1,10 @@
-using Caress.Native;
-
 namespace Caress
 {
     public enum Application : int
     {
         Voip = 2048,
         Audio = 2049,
-        RestrictedLowDelay = 2051 
+        RestrictedLowDelay = 2051
     }
 
     public enum SampleRate : int
