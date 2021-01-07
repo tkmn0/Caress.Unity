@@ -1,5 +1,5 @@
-using System.Runtime.InteropServices;
 using System;
+using System.Runtime.InteropServices;
 
 namespace Caress.Native
 {
@@ -24,54 +24,54 @@ namespace Caress.Native
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void SetMaxAttenuation(IntPtr ptr, double attenuation);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void ChangeRnnModel(IntPtr ptr, RnNoiseModel model);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void Encode(
-            IntPtr ptr, 
+            IntPtr ptr,
             short[] pcm,
             int pcmLen,
             byte[] buffer,
             int bufferLen,
             out EncodeDecodeResult result);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void EncodeFloat(
-            IntPtr ptr, 
+            IntPtr ptr,
             float[] pcm,
             int pcmLen,
             byte[] buffer,
             int bufferLen,
             out EncodeDecodeResult result);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void Decode(
-            IntPtr ptr, 
-            bool fec, 
-            byte[]buffer,
+            IntPtr ptr,
+            bool fec,
+            byte[] buffer,
             int bufferLen,
             short[] pcm,
             int pcmLen,
             out EncodeDecodeResult result);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DecodeFloat(
-            IntPtr ptr, 
-            bool fec, 
-            byte[]buffer,
+            IntPtr ptr,
+            bool fec,
+            byte[] buffer,
             int bufferLen,
             float[] pcm,
             int pcmLen,
             out EncodeDecodeResult result);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyNoiseReducer(ref Data data);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyEncoder(ref Data data);
-        
+
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyDecoder(ref Data data);
     }
