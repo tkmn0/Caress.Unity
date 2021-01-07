@@ -5,8 +5,8 @@ namespace Caress
 {
     public class NoiseReducer
     {
-        private  IntPtr _ptr;
-        
+        private IntPtr _ptr;
+
         public NoiseReducer(NoiseReducerConfig config)
         {
             NativeMethods.CreateNoiseReducer(ref config, out var result);
@@ -38,9 +38,9 @@ namespace Caress
         public void SetAttenuation(double value)
         {
             if (_ptr == IntPtr.Zero) return;
-            NativeMethods.SetMaxAttenuation(_ptr,value);
+            NativeMethods.SetMaxAttenuation(_ptr, value);
         }
-        
+
         public void ChangeRnnModel(RnNoiseModel model)
         {
             if (_ptr == IntPtr.Zero) return;
