@@ -34,7 +34,7 @@ namespace Caress.Examples
                 if (remain < _processBuffer.Length)
                 {
                     Array.Copy(_microphoneBuffer, _clipHead, _processBuffer, 0, remain);
-                    Array.Copy(_microphoneBuffer, 0, _processBuffer, 0, _processBuffer.Length);
+                    Array.Copy(_microphoneBuffer, 0, _processBuffer, 0, _processBuffer.Length - remain);
                 }
                 else
                 {
