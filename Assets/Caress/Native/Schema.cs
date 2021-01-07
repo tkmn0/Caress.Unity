@@ -68,9 +68,9 @@ namespace Caress.Native
         public ApiError Error;
     }
 
-    public struct EncodeDecodeResult
+    public struct IntResult
     {
-        public int Length;
+        public int Value;
         public ApiError Error;
     }
 

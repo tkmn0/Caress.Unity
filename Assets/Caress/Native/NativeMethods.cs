@@ -35,7 +35,7 @@ namespace Caress.Native
             int pcmLen,
             byte[] buffer,
             int bufferLen,
-            out EncodeDecodeResult result);
+            out IntResult result);
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void EncodeFloat(
@@ -54,7 +54,7 @@ namespace Caress.Native
             int bufferLen,
             short[] pcm,
             int pcmLen,
-            out EncodeDecodeResult result);
+            out IntResult result);
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DecodeFloat(
@@ -64,7 +64,7 @@ namespace Caress.Native
             int bufferLen,
             float[] pcm,
             int pcmLen,
-            out EncodeDecodeResult result);
+            out IntResult result);
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void DestroyNoiseReducer(ref Data data);
