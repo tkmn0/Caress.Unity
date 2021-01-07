@@ -32,7 +32,7 @@ namespace Caress
                 throw new Exception(result.Error.Data.StringValue());
             }
 
-            return result.Length;
+            return result.Value;
         }
 
         public int EncodeFloat(float[] pcm, byte[] buffer)
@@ -44,7 +44,7 @@ namespace Caress
                 throw new Exception(result.Error.Data.StringValue());
             }
 
-            return result.Length;
+            return result.Value;
         }
 
         public void Destroy()
@@ -56,6 +56,28 @@ namespace Caress
             };
             NativeMethods.DestroyEncoder(ref data);
             _ptr = data.Ptr;
+        }
+
+        public void SetBitrate(int bitrate)
+        {
+            if (_ptr == IntPtr.Zero) return;
+            NativeMethods.EncoderSetBitrate(_ptr, bitrate, out var error);
+            if (error.Code != (byte) ErrorCode.CaressOk)
+            {
+                throw new Exception(error.Data.StringValue());
+            }
+        }
+
+        public int GetBitrate()
+        {
+            if (_ptr == IntPtr.Zero) return 0;
+            NativeMethods.EncoderGetBitrate(_ptr, out var result);
+            if (result.Error.Code != (byte) ErrorCode.CaressOk)
+            {
+                throw new Exception(result.Error.Data.StringValue());
+            }
+
+            return result.Value;
         }
     }
 }
