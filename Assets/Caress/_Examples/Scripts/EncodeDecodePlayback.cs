@@ -24,7 +24,7 @@ namespace Caress.Examples
             _encoderHandler.OnEncoded -= OnEncoded;
             _decoderHandler.OnDecoded -= OnDecoded;
         }
-        
+
 
         private void OnRecorded(float[] pcm)
         {
