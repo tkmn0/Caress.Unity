@@ -74,6 +74,12 @@ namespace Caress.Native
         public ApiError Error;
     }
 
+    public struct BoolResult
+    {
+        public bool Value;
+        public ApiError Error;
+    }
+
     public enum ErrorCode : byte
     {
         CaressOk = 1,
