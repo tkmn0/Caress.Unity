@@ -33,6 +33,13 @@ namespace Caress
         Stereo = 2
     }
 
+    public enum EncoderSignal : int
+    {
+        SignalAuto = 1000,
+        SignalVoice = 3001,
+        SignalMusic = 3002,
+    }
+
     public struct NoiseReducerConfig
     {
         public int NumChannels;
