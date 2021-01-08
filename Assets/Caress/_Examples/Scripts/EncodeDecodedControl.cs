@@ -1,4 +1,4 @@
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -26,6 +26,20 @@ namespace Caress.Examples
         private void OnDisable()
         {
             _audioToggleButton.onClick.RemoveListener(AudioToggleButtonClicked);
+        }
+
+        private void Update()
+        {
+            _encoderHandler.Encoder.SetBitrate(3000);
+            Debug.Log("bitrate :" + _encoderHandler.Encoder.GetBitrate());
+            _encoderHandler.Encoder.SetComplexity(8);
+            Debug.Log("complexity: " + _encoderHandler.Encoder.GetComplexity());
+            _encoderHandler.Encoder.SetSignal(EncoderSignal.SignalVoice);
+            Debug.Log("signal: " + _encoderHandler.Encoder.GetSignal());
+            _encoderHandler.Encoder.SetInBandFEC(!_encoderHandler.Encoder.GetInBandFEC());
+            Debug.Log("inband fec: " + _encoderHandler.Encoder.GetInBandFEC());
+            _encoderHandler.Encoder.SetPacketLossPercentage(30);
+            Debug.Log("packet loss %: " + _encoderHandler.Encoder.GetPacketLossPercentage());
         }
 
         private void AudioToggleButtonClicked()
