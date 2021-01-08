@@ -53,6 +53,30 @@ namespace Caress.Native
         public static extern void EncoderGetBitrate(IntPtr ptr, out IntResult result);
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderSetComplexity(IntPtr ptr, int complexity, out ApiError error);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderGetComplexity(IntPtr ptr, out IntResult result);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderSetSignal(IntPtr ptr, int signal, out ApiError error);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderGetSignal(IntPtr ptr, out IntResult result);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderSetInBandFEC(IntPtr ptr, bool enable, out ApiError error);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderGetInBandFEC(IntPtr ptr, out BoolResult result);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderSetPacketLossPercentage(IntPtr ptr, int percentage, out ApiError error);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
+        public static extern void EncoderGetPacketLossPercentage(IntPtr ptr, out IntResult result);
+
+        [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void Decode(
             IntPtr ptr,
             bool fec,
