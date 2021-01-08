@@ -5,7 +5,7 @@ namespace Caress.Native
 {
     internal static class NativeMethods
     {
-        private const string DLLName = "caress";
+        private const string DLLName = "libcaress";
 
         [DllImport(DLLName, CallingConvention = CallingConvention.Cdecl)]
         public static extern void CreateNoiseReducer(ref NoiseReducerConfig config, out PointerResult result);
