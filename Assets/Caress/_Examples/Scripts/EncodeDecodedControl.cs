@@ -1,4 +1,4 @@
-﻿using UnityEngine;
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -10,6 +10,7 @@ namespace Caress.Examples
         [SerializeField] private MixerState _mixerState = MixerState.Original;
         [SerializeField] private Button _audioToggleButton = default;
         [SerializeField] private Text _audioPlayModeText = default;
+        [SerializeField] private EncoderHandler _encoderHandler = default;
 
         private void Start()
         {

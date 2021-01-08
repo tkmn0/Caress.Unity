@@ -1012,6 +1012,7 @@ MonoBehaviour:
   _mixerState: 2
   _audioToggleButton: {fileID: 153579620}
   _audioPlayModeText: {fileID: 1704387122}
+  _encoderHandler: {fileID: 8317993140325601546}
 --- !u!114 &762939776
 MonoBehaviour:
   m_ObjectHideFlags: 0
