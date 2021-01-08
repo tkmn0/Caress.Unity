@@ -38,6 +38,7 @@ namespace Caress
         SignalAuto = 1000,
         SignalVoice = 3001,
         SignalMusic = 3002,
+        None = 0,
     }
 
     public struct NoiseReducerConfig
