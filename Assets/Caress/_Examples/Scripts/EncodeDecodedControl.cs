@@ -106,7 +106,6 @@ namespace Caress.Examples
         {
             var enc = _encoderHandler.Encoder;
             var next = enc.GetSignal() == EncoderSignal.SignalAuto ? EncoderSignal.SignalMusic : enc.GetSignal() == EncoderSignal.SignalMusic ? EncoderSignal.SignalVoice : EncoderSignal.SignalAuto;
-            Debug.Log("next: " + enc.GetSignal());
             enc.SetSignal(next);
             _signalText.text = next.ToString();
         }
