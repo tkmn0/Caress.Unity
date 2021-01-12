@@ -6,6 +6,8 @@ namespace Caress.Examples
 {
     public class EncodeDecodedControl : MonoBehaviour
     {
+        [SerializeField] private Toggle _showUIToggle = default;
+        [SerializeField] private GameObject _container = default;
         [SerializeField] private AudioMixer _audioMixer;
         [SerializeField] private MixerState _mixerState = MixerState.Original;
         [SerializeField] private Button _audioToggleButton;
@@ -41,6 +43,7 @@ namespace Caress.Examples
         private void OnEnable()
         {
             _audioToggleButton.onClick.AddListener(AudioToggleButtonClicked);
+            _showUIToggle.onValueChanged.AddListener(ToggleControlVisibility);
             _bitrateAddButton.onClick.AddListener(AddBitrate);
             _bitrateReduceButton.onClick.AddListener(ReduceBitrate);
             _complexityAddButton.onClick.AddListener(AddComplexity);
@@ -54,6 +57,7 @@ namespace Caress.Examples
         private void OnDisable()
         {
             _audioToggleButton.onClick.RemoveListener(AudioToggleButtonClicked);
+            _showUIToggle.onValueChanged.RemoveListener(ToggleControlVisibility);
             _bitrateAddButton.onClick.RemoveListener(AddBitrate);
             _bitrateReduceButton.onClick.RemoveListener(ReduceBitrate);
             _complexityAddButton.onClick.RemoveListener(AddComplexity);
@@ -63,6 +67,8 @@ namespace Caress.Examples
             _packetLossPercentageAddButton.onClick.RemoveListener(AddPacketLossPercentage);
             _packetLossPercentageReduceButton.onClick.RemoveListener(ReducePacketLossPercentage);
         }
+        
+        private void ToggleControlVisibility(bool show) => _container.SetActive(show);
 
         private void AudioToggleButtonClicked()
         {
