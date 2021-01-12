@@ -1,4 +1,5 @@
-﻿using UnityEngine;
+﻿using System;
+using UnityEngine;
 using UnityEngine.Audio;
 using UnityEngine.UI;
 
@@ -33,6 +34,7 @@ namespace Caress.Examples
             _audioPlayModeText.text = _mixerState.ToString();
 
             var enc = _encoderHandler.Encoder;
+            enc.SetBitrate(enc.GetBitrate());
             _bitrateText.text = enc.GetBitrate().ToString();
             _complexityText.text = enc.GetComplexity().ToString();
             _signalText.text = enc.GetSignal().ToString();
