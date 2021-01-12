@@ -35,7 +35,7 @@ namespace Caress
 
     public enum EncoderSignal : int
     {
-        SignalAuto = 1000,
+        SignalAuto = -1000,
         SignalVoice = 3001,
         SignalMusic = 3002,
         None = 0,
