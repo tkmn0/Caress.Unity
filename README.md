@@ -4,7 +4,7 @@
 Caress.Unity is a wrapper library for libopus and librnnoise. The libopus can handle encoding / decoding audio frames. The librnnnoise can handle noise reducing. Caress.Unity can encoding, decoding, and noise reducing with Unity(C#). Actually, Caress.unity is a wrapper for [caress](https://github.com/tkmn0/caress), so caress is a wrapper library for c libraries and Caress.Unity is a wrapper library for golang.    
 
 <div align="center">
-<img src="./Docs/caress_example.gif" alt="caress_example_gif">
+<img src="./Docs/caress_example.gif" alt="caress_example_gif" width=80% height=auto>
 </div>
 
 
@@ -12,6 +12,10 @@ Caress.Unity is a wrapper library for libopus and librnnoise. The libopus can ha
 - Audio encoding with opus codec.
 - Audio decoding with opus codec.
 - Noise reduction with RNNoise.
+
+## Supported Platforms
+- Windows x86_64
+- OSX x86_64
 
 ## Installation
 1. __UPM Package__    
