@@ -36,6 +36,7 @@ namespace Caress.Examples
 
         private void OnEncoded(byte[] buffer, int length)
         {
+            if (length == 0) return;
             _decoderHandler.Decode(buffer, length);
         }
 
