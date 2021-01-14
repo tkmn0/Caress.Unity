@@ -1,7 +1,7 @@
 # Caress.Unity - encoder / decoder / noise reducer
 
 ## What is Caress.Unity?    
-Caress.Unity is a wrapper library for libopus and librnnoise. The libopus can handle encoding / decoding audio frames. The librnnnoise can handle noise reducing. Caress.Unity can encoding, decoding, and noise reducing with Unity(C#). Actually, Caress.unity is a wrapper for [caress](https://github.com/tkmn0/caress), so caress is a wrapper library for c libraries and Caress.Unity is a wrapper library for golang.    
+Caress.Unity is a wrapper library for libopus and librnnoise. The libopus can handle encoding / decoding audio frames. The librnnnoise can handle noise reducing. Caress.Unity can encoding, decoding, and noise reducing with Unity(C#). Actually, Caress.Unity is a wrapper for [caress](https://github.com/tkmn0/caress), so caress is a wrapper library for c libraries and Caress.Unity is a wrapper library for golang.    
 
 <div align="center">
 <img src="./Docs/caress_example.gif" alt="caress_example_gif" width=80% height=auto>
@@ -35,8 +35,11 @@ Check [Examples](./Assets/Caress/_Examples).
 
 ## Special thanks to
 - [opus](https://github.com/xiph/opus) 
-- [rnnoise-nu](https://github.com/GregorR/rnnoise-nu)
 - [rnnoise](https://jmvalin.ca/demo/rnnoise/)
+- [rnnoise-nu](https://github.com/GregorR/rnnoise-nu)
 
 ## License
-Caress.Unity is under MIT License.
+- Caress.Unity is under [MIT License](./LICENSE).
+- xiph/opus - [LICENSE](https://github.com/xiph/opus/blob/master/COPYING)
+- xiph/rnnoise - [LICENSE](https://github.com/xiph/rnnoise/blob/master/COPYING)
+- GregorR/rnnoise-nu - [LICENSE](https://github.com/GregorR/rnnoise-nu/blob/master/COPYING)
