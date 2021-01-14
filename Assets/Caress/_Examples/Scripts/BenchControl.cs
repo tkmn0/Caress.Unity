@@ -97,7 +97,6 @@ namespace Caress.Examples
             var rawBitRate = _rawBitRateHandler.GetLastBufferSize() / (float)_unit;
             var encodedBitRate = _encodedBitRateHandler.GetLastBufferSize() / (float)_unit;
             var decodedBitrate = _decodedBitRateHandler.GetLastBufferSize() / (float)_unit;
-            Debug.Log(rawBitRate);
             _rawBitRateText.text = rawBitRate.ToString("f2") + _unit;
             _encodedBitRateText.text = encodedBitRate.ToString("f2") + _unit;
             _decodedBitRateText.text = decodedBitrate.ToString("f2") + _unit;
