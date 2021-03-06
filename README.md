@@ -19,8 +19,8 @@ Caress.Unity is a wrapper library for libopus and librnnoise. The libopus can ha
 
 ## Installation
 1. __UPM Package__    
-You can add `https://github.com/tkmn0/Caress.Unity?path=Assets/Caress` to Package Manager.    
-or add `"com.nzer0.caress": "https://github.com/tkmn0/Caress.Unity?path=Assets/Caress"` to Packages/manifest.json.
+You can add `https://github.com/tkmn0/Caress.Unity.git?path=Assets/Caress` to Package Manager.    
+or add `"com.nzer0.caress": "https://github.com/tkmn0/Caress.Unity.git?path=Assets/Caress"` to Packages/manifest.json.
 
 2. __Unitypackage__    
 You can download Caress.unitypackage from Releases.
